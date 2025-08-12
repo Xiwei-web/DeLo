@@ -8,7 +8,6 @@ We tested our code on Ubuntu 22.04 with PyTorch 1.13. You can use `environment.y
 ## Run
 ```text
 bash scripts/run.sh
-
 ```
 
 ## Data Preparation
