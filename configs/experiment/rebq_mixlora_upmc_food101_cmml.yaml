@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+  - override /data: upmc_food101_cmml
+  - override /model: rebq_mixlora
+  - override /train: default
+  - override /test: default
+
+EXP_NOTE: rebq_mixlora_food101
+OUTPUT_DIR: /l/users/xiwei.liu/5/RebQ.update/checkpoints/${EXP_NOTE}
+
+# vvv--- 新增/修改以下部分 ---vvv
+train:
+  criterion:
+    NAME: rebq-mixlora # 指定使用我们自定义的损失函数
+    DATASET_NAME: ${data.NAME}
+    # 如果需要，可以在这里覆盖损失函数的超参数
+    LAMBDA_ALIGN: 0.1
+    # LAMBDA_CONSISTENCY: 0.1
+# ^^^--------------------------^^^

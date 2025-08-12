@@ -1,0 +1,20 @@
+# configs/model/rebq_mixlora.yaml
+
+NAME: rebq-mixlora  # 必须与 model/builder.py 中的新模型名称匹配
+TOTAL_LABELS: ${data.TOTAL_LABELS}
+NUM_TASKS: ${data.NUM_TASKS}
+NUM_LABELS_PER_TASK: ${data.NUM_LABELS_PER_TASK}
+MAX_LENGTH: ${data.MAX_LENGTH}
+HIDDEN_SIZE: 768
+
+# --- RebQ-MixLoRA Specific Parameters ---
+# 这些是我们新模型的核心超参数
+
+# LoRA的秩 (rank)
+LORA_R: 4
+
+# 因子池的大小 (Number of Experts/Factors)
+LORA_E: 16
+
+# LoRA适配器的缩放系数
+LORA_ALPHA: 2.0
