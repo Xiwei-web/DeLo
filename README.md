@@ -7,7 +7,7 @@ We tested our code on Ubuntu 22.04 with PyTorch 1.13. You can use `environment.y
 
 ## Data Preparation
 
-Download `UPMC-Food101` and `MM-IMDb` datasets according to the [MAP](https://example.com/link-to-map-repo) repo and organize them as following:
+Download `UPMC-Food101` and `MM-IMDb` datasets according to the [MAP](https://github.com/YiLunLee/missing_aware_prompts) repo and organize them as following:
 
 ```text
 data
@@ -19,3 +19,7 @@ data
     ├── images
     ├── texts
     └── UPMC-Food101-CMML.json
+
+## Run
+```text
+bash scripts/food101_both_0.7.sh
